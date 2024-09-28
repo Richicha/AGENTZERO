@@ -228,3 +228,23 @@ When writing own code, ALWAYS put print/log statements inside and at the end of 
     }
 }
 ~~~
+
+### github_tool:
+Interact with GitHub repositories.
+Provide "action" argument with one of the following values: "create_repo", "push_project", "get_repo", or "list_repos".
+For "create_repo" and "push_project", provide "repo_name" argument.
+For "push_project", also provide "project_path" argument.
+For "get_repo", provide "repo_name" argument.
+**Example usage**:
+~~~json
+{
+    "thoughts": [
+        "I need to create a new GitHub repository...",
+    ],
+    "tool_name": "github_tool",
+    "tool_args": {
+        "action": "create_repo",
+        "repo_name": "my-new-repo"
+    }
+}
+~~~
